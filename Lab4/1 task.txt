@@ -1,0 +1,2 @@
+Enter the root directory:
+cd /

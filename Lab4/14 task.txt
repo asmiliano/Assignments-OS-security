@@ -1,0 +1,7 @@
+[asmil@fedora /]$ ls -sf /usr/share/zoneinfo/UTC /etc/localtime
+/usr/share/zoneinfo/UTC  /etc/localtime
+[asmil@fedora /]$ date
+Sat Sep 30 03:11:16 PM PDT 2023
+
+из-за того что я не сделал ребут системы, время не изменилось. А так когда я ввел эту команду это команда , вернула бы данные назад в исходное время
+

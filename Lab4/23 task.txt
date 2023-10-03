@@ -1,0 +1,5 @@
+[asmil@fedora /]$ timedatectl set-local-rtc 0
+[asmil@fedora /]$ timedatectl | grep local
+          RTC in local TZ: no
+
+В этом примере я постарался перезагрузить систему с командой systemctl restart chronyd , для того чтобы изменить вывод данных, но не смотря на ребут, вышли те же данные

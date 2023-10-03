@@ -1,0 +1,56 @@
+[asmil@fedora /]$ systemctl status chronyd
+● chronyd.service - NTP client/server
+     Loaded: loaded (/usr/lib/systemd/system/chronyd.service; enabled; preset: enabled)
+    Drop-In: /usr/lib/systemd/system/service.d
+             └─10-timeout-abort.conf
+     Active: active (running) since Sat 2023-09-30 02:15:42 PDT; 13h ago
+       Docs: man:chronyd(8)
+             man:chrony.conf(5)
+    Process: 633 ExecStart=/usr/sbin/chronyd $OPTIONS (code=exited, status=0/SUCCESS)
+   Main PID: 668 (chronyd)
+      Tasks: 1 (limit: 4614)
+     Memory: 5.8M
+        CPU: 945ms
+     CGroup: /system.slice/chronyd.service
+             └─668 /usr/sbin/chronyd -F 2
+
+Sep 30 14:53:55 fedora chronyd[668]: Can't synchronise: no selectable sources
+Sep 30 14:56:05 fedora chronyd[668]: Selected source 185.116.194.200 (2.fedora.pool.ntp>
+Sep 30 14:56:05 fedora chronyd[668]: System clock wrong by 31.649494 seconds
+Sep 30 14:57:10 fedora chronyd[668]: Selected source 80.241.0.72 (2.fedora.pool.ntp.org)
+Sep 30 14:58:14 fedora chronyd[668]: Selected source 185.121.81.200 (2.fedora.pool.ntp.>
+Sep 30 14:55:05 fedora chronyd[668]: Backward time jump detected!
+Sep 30 14:55:05 fedora chronyd[668]: Can't synchronise: no selectable sources
+Sep 30 14:57:14 fedora chronyd[668]: Selected source 185.121.81.200 (2.fedora.pool.ntp.>
+Sep 30 14:57:14 fedora chronyd[668]: System clock wrong by 270.586422 seconds
+Sep 30 14:59:25 fedora chronyd[668]: Selected source 80.241.0.72 (2.fedora.pool.ntp.org)
+lines 1-25/25 (END)
+
+[asmil@fedora /]$ systemctl start chronyd
+[asmil@fedora /]$ systemctl status chronyd
+● chronyd.service - NTP client/server
+     Loaded: loaded (/usr/lib/systemd/system/chronyd.service; enabled; preset: enabled)
+    Drop-In: /usr/lib/systemd/system/service.d
+             └─10-timeout-abort.conf
+     Active: active (running) since Sun 2023-10-01 03:52:34 PDT; 21min ago
+       Docs: man:chronyd(8)
+             man:chrony.conf(5)
+    Process: 634 ExecStart=/usr/sbin/chronyd $OPTIONS (code=exited, status=0/SUCCESS)
+   Main PID: 648 (chronyd)
+      Tasks: 1 (limit: 4614)
+     Memory: 7.5M
+        CPU: 133ms
+     CGroup: /system.slice/chronyd.service
+             └─648 /usr/sbin/chronyd -F 2
+
+Oct 01 03:52:34 fedora systemd[1]: Starting chronyd.service - NTP client/server...
+Oct 01 03:52:34 fedora chronyd[648]: chronyd version 4.3 starting (+CMDMON +NTP +REFCLO>
+Oct 01 03:52:34 fedora chronyd[648]: Frequency -537.231 +/- 1.949 ppm read from /var/li>
+Oct 01 03:52:34 fedora chronyd[648]: Using right/UTC timezone to obtain leap second data
+Oct 01 03:52:34 fedora chronyd[648]: Loaded seccomp filter (level 2)
+Oct 01 03:52:34 fedora systemd[1]: Started chronyd.service - NTP client/server.
+Oct 01 03:52:43 fedora chronyd[648]: Selected source 162.159.200.123 (2.fedora.pool.ntp>
+Oct 01 03:52:43 fedora chronyd[648]: System clock TAI offset set to 37 seconds
+Oct 01 03:53:49 fedora chronyd[648]: Selected source 45.132.84.104 (2.fedora.pool.ntp.o>
+Oct 01 03:55:58 fedora chronyd[648]: Selected source 162.159.200.123 (2.fedora.pool.ntp>
+lines 1-25/25 (END)

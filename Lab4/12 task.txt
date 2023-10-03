@@ -1,0 +1,15 @@
+[asmil@fedora /]$ cp /etc/localtime /tmp
+
+[asmil@fedora /]$ ls -sf /usr/share/zoneinfo/America/Los_Angeles /etc/localtime
+/usr/share/zoneinfo/America/Los_Angeles  
+
+данная команда ls -sf сравнивает размеры файлов, но перед этим копирует данные с одной папки в другую
+
+и в итоге получается что папка /usr/share/zoneinfo/America/Los_Angeles весит  больше чем папка /etc/localtime
+--------------------------------------------------------------
+[asmil@fedora /]$ sudo cp /tmp/localtime /etc
+[sudo] password for asmil: 
+[asmil@fedora /]$ 
+
+
+no output

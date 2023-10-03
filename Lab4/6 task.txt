@@ -1,0 +1,14 @@
+[asmil@fedora /]$ sudo hwclock -r
+[sudo] password for asmil: 
+2025-01-01 18:02:33.911112-08:00
+[asmil@fedora /]$ date
+Sat Sep 30 02:50:26 PM PDT 2023
+[asmil@fedora /]$ date -u
+Sat Sep 30 09:50:31 PM UTC 2023
+[asmil@fedora /]$ date -u -r
+date: option requires an argument -- 'r'
+Try 'date --help' for more information.
+[asmil@fedora /]$ sudo hwclock -w
+[asmil@fedora /]$ sudo hwclock -r; date
+2023-09-30 14:50:48.311604-07:00
+Sat Sep 30 02:50:52 PM PDT 2023

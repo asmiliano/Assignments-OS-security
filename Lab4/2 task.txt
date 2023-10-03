@@ -1,0 +1,4 @@
+[asmil@fedora /]$ sudo hwclock -r
+[sudo] password for asmil: 
+2023-09-30 14:32:27.918847-07:00
+

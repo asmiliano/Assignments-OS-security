@@ -1,0 +1,3 @@
+[asmil@fedora /]$ timedatectl | grep local
+          RTC in local TZ: no
+

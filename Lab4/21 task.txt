@@ -1,0 +1,27 @@
+[asmil@fedora /]$ timedatectl set-time "2012-12-12 12:12:10"
+Failed to set time: Automatic time synchronization is enabled
+
+
+[asmil@fedora /]$ timedatectl 
+               Local time: Sun 2023-10-01 04:24:09 PDT
+           Universal time: Sun 2023-10-01 11:24:09 UTC
+                 RTC time: Sun 2023-10-01 11:24:08
+                Time zone: Asia/Almaty (PDT, -0700)
+System clock synchronized: yes
+              NTP service: active
+          RTC in local TZ: no
+
+[asmil@fedora /]$ sudo ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
+[asmil@fedora /]$ date
+Sun Oct  1 07:27:23 AM EDT 2023
+
+[asmil@fedora /]$ timedatectl 
+               Local time: Sun 2023-10-01 07:28:34 EDT
+           Universal time: Sun 2023-10-01 11:28:34 UTC
+                 RTC time: Sun 2023-10-01 11:28:34
+                Time zone: America/New_York (EDT, -0400)
+System clock synchronized: yes
+              NTP service: active
+          RTC in local TZ: no
+
+

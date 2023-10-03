@@ -1,0 +1,8 @@
+[asmil@fedora /]$ chronyc sources
+MS Name/IP address         Stratum Poll Reach LastRx Last sample               
+===============================================================================
+^- 45.132.84.104                 3   7   273   273  +7676us[+6593us] +/-  124ms
+^* time.cloudflare.com           3   6   277    78  -1420us[-1879us] +/-   38ms
+^+ 185.116.194.200               2   7   177    11  -7750us[-7750us] +/-   59ms
+^+ time.cloudflare.com           3   7   377    75  -1084us[-1084us] +/-   37ms
+

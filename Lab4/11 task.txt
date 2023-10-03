@@ -1,0 +1,80 @@
+[asmil@fedora /]$ ls /usr/share/zoneinfo/ -l -a
+total 356
+drwxr-xr-x.  1 root root    832 Apr 13 14:44 .
+drwxr-xr-x.  1 root root   4732 Sep 17 08:14 ..
+drwxr-xr-x.  1 root root    798 Apr 13 14:44 Africa
+drwxr-xr-x.  1 root root   2474 Apr 13 14:44 America
+drwxr-xr-x.  1 root root    170 Apr 13 14:44 Antarctica
+drwxr-xr-x.  1 root root     24 Apr 13 14:44 Arctic
+drwxr-xr-x.  1 root root   1456 Apr 13 14:44 Asia
+drwxr-xr-x.  1 root root    188 Apr 13 14:44 Atlantic
+drwxr-xr-x.  1 root root    308 Apr 13 14:44 Australia
+drwxr-xr-x.  1 root root     42 Apr 13 14:44 Brazil
+drwxr-xr-x.  1 root root    132 Apr 13 14:44 Canada
+-rw-r--r--.  1 root root   2094 Mar 28  2023 CET
+drwxr-xr-x.  1 root root     46 Apr 13 14:44 Chile
+-rw-r--r--.  1 root root   2310 Mar 28  2023 CST6CDT
+-rw-r--r--.  2 root root   2416 Mar 28  2023 Cuba
+-rw-r--r--.  1 root root   1908 Mar 28  2023 EET
+-rw-r--r--.  2 root root   2399 Mar 28  2023 Egypt
+-rw-r--r--.  2 root root   3492 Mar 28  2023 Eire
+-rw-r--r--.  1 root root    114 Mar 28  2023 EST
+-rw-r--r--.  1 root root   2310 Mar 28  2023 EST5EDT
+drwxr-xr-x.  1 root root    366 Apr 13 14:44 Etc
+drwxr-xr-x.  1 root root    922 Apr 13 14:44 Europe
+-rw-r--r--.  1 root root    116 Mar 28  2023 Factory
+-rw-r--r--.  7 root root   3664 Mar 28  2023 GB
+-rw-r--r--.  7 root root   3664 Mar 28  2023 GB-Eire
+-rw-r--r--. 10 root root    114 Mar 28  2023 GMT
+-rw-r--r--. 10 root root    114 Mar 28  2023 GMT+0
+-rw-r--r--. 10 root root    114 Mar 28  2023 GMT-0
+-rw-r--r--. 10 root root    114 Mar 28  2023 GMT0
+-rw-r--r--. 10 root root    114 Mar 28  2023 Greenwich
+-rw-r--r--.  2 root root   1233 Mar 28  2023 Hongkong
+-rw-r--r--.  1 root root    115 Mar 28  2023 HST
+-rw-r--r--. 14 root root    148 Mar 28  2023 Iceland
+drwxr-xr-x.  1 root root    164 Apr 13 14:44 Indian
+-rw-r--r--.  2 root root   1262 Mar 28  2023 Iran
+-rw-r--r--.  1 root root   4446 Jan  7  2023 iso3166.tab
+-rw-r--r--.  3 root root   2388 Mar 28  2023 Israel
+-rw-r--r--.  2 root root    482 Mar 28  2023 Jamaica
+-rw-r--r--.  2 root root    309 Mar 28  2023 Japan
+-rw-r--r--.  2 root root    316 Mar 28  2023 Kwajalein
+-rw-r--r--.  1 root root   3392 Jan 20  2023 leapseconds
+-rw-r--r--.  1 root root  10666 Jan 20  2023 leap-seconds.list
+-rw-r--r--.  2 root root    625 Mar 28  2023 Libya
+-rw-r--r--.  1 root root   2094 Mar 28  2023 MET
+drwxr-xr-x.  1 root root     46 Apr 13 14:44 Mexico
+-rw-r--r--.  1 root root    114 Mar 28  2023 MST
+-rw-r--r--.  1 root root   2310 Mar 28  2023 MST7MDT
+-rw-r--r--.  4 root root   2460 Mar 28  2023 Navajo
+-rw-r--r--.  4 root root   2437 Mar 28  2023 NZ
+-rw-r--r--.  2 root root   2068 Mar 28  2023 NZ-CHAT
+drwxr-xr-x.  1 root root    602 Apr 13 14:44 Pacific
+-rw-r--r--.  2 root root   2654 Mar 28  2023 Poland
+-rw-r--r--.  2 root root   3497 Mar 28  2023 Portugal
+drwxr-xr-x.  1 root root    656 Apr 13 14:44 posix
+-rw-r--r--.  3 root root   3552 Mar 28  2023 posixrules
+-rw-r--r--.  5 root root    561 Mar 28  2023 PRC
+-rw-r--r--.  1 root root   2310 Mar 28  2023 PST8PDT
+drwxr-xr-x.  1 root root    656 Apr 13 14:44 right
+-rw-r--r--.  2 root root    761 Mar 28  2023 ROC
+-rw-r--r--.  2 root root    617 Mar 28  2023 ROK
+-rw-r--r--.  3 root root    415 Mar 28  2023 Singapore
+-rw-r--r--.  3 root root   1947 Mar 28  2023 Turkey
+-rw-r--r--.  1 root root 109248 Mar 28  2023 tzdata.zi
+-rw-r--r--.  8 root root    114 Mar 28  2023 UCT
+-rw-r--r--.  8 root root    114 Mar 28  2023 Universal
+drwxr-xr-x.  1 root root    190 Apr 13 14:44 US
+-rw-r--r--.  8 root root    114 Mar 28  2023 UTC
+-rw-r--r--.  1 root root   1905 Mar 28  2023 WET
+-rw-r--r--.  2 root root   1535 Mar 28  2023 W-SU
+-rw-r--r--.  1 root root  17551 Jan 23  2023 zone1970.tab
+-rw-r--r--.  1 root root  18855 Jan 23  2023 zone.tab
+-rw-r--r--.  8 root root    114 Mar 28  2023 Zulu
+
+Итого у нас есть 365 временных зон, и добавил доп. команды -l -a чтобы было удобно для просмотра
+
+-l  = показывает все в листовом виде
+-a = показывает все по алфавитному порядку
+
