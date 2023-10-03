@@ -1,2 +1,2 @@
 # OS-assignments-OS-security #
-Solutions of tasks about Operation System's security
+Solution of assignments of Operation System's security
