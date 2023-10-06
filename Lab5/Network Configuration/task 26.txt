@@ -1,0 +1,23 @@
+Step 26 
+
+Restore the copy of the network interface configuration file by executing the following command. Confirm overwriting the file by responding with y. Then, verify that the original network interface configuration has been restored. 
+
+cp /root/ifcfg-eth0 /etc/sysconfig/network-scripts/ 
+y 
+Enter
+ 
+cat /etc/sysconfig/network-scripts/ifcfg-eth0 
+------------------------------------------------------------------------------------------------------------------------------------------
+
+[asmil@fedora /]$ cp /root/ifcfg-enp0s3 /etc/sysconfig/network-scripts/
+cp: cannot stat '/root/ifcfg-enp0s3': Permission denied
+[asmil@fedora /]$ sudo cp /root/ifcfg-enp0s3 /etc/sysconfig/network-scripts/
+[asmil@fedora /]$ cd /etc/sysconfig/network-scripts/
+[asmil@fedora network-scripts]$ ls
+
+[asmil@fedora /]$ cat /etc/sysconfig/network-scripts/ifcfg-enp0s3 
+DEVICE=enp0s3
+BOOTPROTO=static
+IPADDR=192.168.1.10
+NETMASK=255.255.255.0
+GATEWAY=192.168.1.1

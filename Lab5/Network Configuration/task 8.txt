@@ -1,0 +1,9 @@
+Step 8 
+
+Execute the ip route command to verify that the routing table shows 10.10.10.1 as the default router specified in the static configuration file: 
+
+ip route 
+------------------------------------------------------------------------------------------------------------------------------------------asmil@asmil:/etc/netplan$ ip route
+default via 10.0.2.2 dev enp0s3 proto dhcp metric 100 
+10.0.2.0/24 dev enp0s3 proto kernel scope link src 10.0.2.15 metric 100 
+IP/16 dev enp0s3 scope link metric 1000

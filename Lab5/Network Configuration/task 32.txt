@@ -1,0 +1,12 @@
+Step 32 
+
+Execute the following command to attempt to connect using this new hostname: 
+
+ping -c5 cserver 
+
+Currently, you only have a configured network interface on the 127.0.0.0/255.0.0.0 network. Because the address 192.168.1.3 is not on this network, the system will be unable to reach the IP address associated with cserver without a router. 
+
+The ping command is used to check the connectivity to a host. This command will be covered in detail in a later chapter 
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+HELP ME !!!

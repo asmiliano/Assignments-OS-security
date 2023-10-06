@@ -1,0 +1,91 @@
+Step 15 
+
+To disable an Ethernet interface, it can be brought down with the ifconfig [device] down command. Disable the eth0 interface and check the status of the interface by executing the following commands: 
+
+ifdown eth0 
+
+ifconfig eth0
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+[asmil@fedora netplan]$ ifdown eth0
+bash: ifdown: command not found...
+Packages providing this file are:
+'NetworkManager-initscripts-updown'
+'network-scripts'
+
+
+[asmil@fedora netplan]$ sudo dnf install NetworkManager-initscripts-updown
+Copr repo for PyCharm owned by phracek                  873  B/s | 2.1 kB     00:02    
+Fedora 38 - x86_64 - Updates                            4.4 kB/s | 4.5 kB     00:01    
+Fedora 38 - x86_64 - Updates                            786 kB/s | 3.8 MB     00:04    
+Fedora Modular 38 - x86_64 - Updates                    8.2 kB/s | 6.1 kB     00:00    
+google-chrome                                           2.8 kB/s | 1.3 kB     00:00    
+google-chrome                                           4.6 kB/s | 3.6 kB     00:00    
+RPM Fusion for Fedora 38 - Nonfree - NVIDIA Driver       20 kB/s |  15 kB     00:00    
+RPM Fusion for Fedora 38 - Nonfree - Steam               12 kB/s |  14 kB     00:01    
+Dependencies resolved.
+========================================================================================
+ Package                               Arch       Version             Repository   Size
+========================================================================================
+Installing:
+ NetworkManager-initscripts-updown     noarch     1:1.42.8-1.fc38     updates      14 k
+
+Transaction Summary
+========================================================================================
+Install  1 Package
+
+Total download size: 14 k
+Installed size: 2.1 k
+Is this ok [y/N]: y
+Downloading Packages:
+NetworkManager-initscripts-updown-1.42.8-1.fc38.noarch. 6.6 kB/s |  14 kB     00:02    
+----------------------------------------------------------------------------------------
+Total                                                   5.2 kB/s |  14 kB     00:02     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                1/1 
+  Installing       : NetworkManager-initscripts-updown-1:1.42.8-1.fc38.noarch       1/1 
+  Running scriptlet: NetworkManager-initscripts-updown-1:1.42.8-1.fc38.noarch       1/1 
+  Verifying        : NetworkManager-initscripts-updown-1:1.42.8-1.fc38.noarch       1/1 
+
+Installed:
+  NetworkManager-initscripts-updown-1:1.42.8-1.fc38.noarch                              
+Complete!
+[asmil@fedora netplan]$ sudo ifdown eth0
+No suitable profile "eth0" found!
+See all profiles with nmcli connection.
+Reload files from disk with nmcli connection reload
+Deactivate the desired profile with nmcli connection down \"$NAME\"
+
+
+[asmil@fedora netplan]$ sudo ifconfig eth0
+eth0: error fetching interface information: Device not found
+[asmil@fedora netplan]$  ifconfig 
+enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
+        inet6 fe80::73fb:776:72ab:5ac  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:d1:5a:66  txqueuelen 1000  (Ethernet)
+        RX packets 8792  bytes 9352703 (8.9 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 3599  bytes 489858 (478.3 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 18  bytes 2118 (2.0 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 18  bytes 2118 (2.0 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+------------------------------------------------------------
+
+[asmil@fedora netplan]$ ip link show eth0
+Device "eth0" does not exist.[asmil@fedora /]$ ip link show 
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000
+    link/ether 08:00:27:d1:5a:66 brd ff:ff:ff:ff:ff:ff

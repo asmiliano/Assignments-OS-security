@@ -1,0 +1,13 @@
+Step 27 
+
+Restart the network service by using the service command instead of executing the init script directly: 
+
+service network restart 
+------------------------------------------------------------------------------------------------------------------------------------------
+
+[asmil@fedora /]$ service network restart
+Redirecting to /bin/systemctl restart network.service
+Failed to restart network.service: Unit network.service not found.
+
+[asmil@fedora /]$ sudo systemctl restart NetworkManager
+

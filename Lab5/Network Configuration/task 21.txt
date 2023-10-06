@@ -1,0 +1,9 @@
+Step 21 
+
+Execute the following command to modify the network interface configuration file: 
+
+nano /etc/sysconfig/network-scripts/ifcfg-eth0 
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+[asmil@fedora /]$ nano  /etc/sysconfig/network-scripts/readme-ifcfg-rh.txt
+

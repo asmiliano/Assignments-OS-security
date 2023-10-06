@@ -1,0 +1,14 @@
+Step 20 
+
+ 
+Create a copy of the network interface configuration file in your home directory by executing the following command: 
+
+cp /etc/sysconfig/network-scripts/ifcfg-eth0 /root 
+
+[root@centos ~]# cp /etc/sysconfig/network-scripts/ifcfg-eth0 /root 
+
+This step is designed to provide a backup of the original file in the event that you make a mistake while editing the file. 
+------------------------------------------------------------------------------------------------------------------------------------------
+
+[asmil@fedora /]$ sudo cp /etc/sysconfig/network-scripts/readme-ifcfg-rh.txt /root
+[sudo] password for asmil: 

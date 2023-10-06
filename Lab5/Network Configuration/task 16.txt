@@ -1,0 +1,21 @@
+Step 16 
+
+To enable an Ethernet interface, it can be brought up with the ifconfig [device] up command. Enable the eth0 interface and check the status of the interface by executing the following commands: 
+
+ifup eth0 
+
+ifconfig eth0 
+------------------------------------------------------------------------------------------------------------------------------------------
+
+[asmil@fedora /]$ nmcli connection show
+NAME                UUID                                  TYPE      DEVICE 
+Wired connection 1  caa3f8ad-c1d9-41cd-b3e9-873192d65bb7  ethernet  enp0s3 
+lo                  e33b8683-9560-4d4b-925f-08f9d5f96c2d  loopback  lo
+
+[asmil@fedora /]$ nmcli connection up "Wired connection 1"
+Connection successfully activated (D-Bus active path: /org/freedesktop/NetworkManager/ActiveConnection/3)
+[asmil@fedora /]$ nmcli connection show
+NAME                UUID                                  TYPE      DEVICE 
+Wired connection 1  caa3f8ad-c1d9-41cd-b3e9-873192d65bb7  ethernet  enp0s3 
+lo                  e33b8683-9560-4d4b-925f-08f9d5f96c2d  loopback  lo     
+

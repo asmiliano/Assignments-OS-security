@@ -1,0 +1,15 @@
+Step 5 
+
+Execute the following command to begin modifying the network interface configuration file: 
+
+nano /etc/netplan/00-installer-config.yaml
+------------------------------------------------------------------------------------------------------------------------------------------
+
+nano /etc/netplan/01-network-manager-all.yaml 
+
+  GNU nano 6.2 /etc/netplan/01-network-manager-all.yaml          
+# Let NetworkManager manage all devices on this system
+network:
+  version: 2
+  renderer: NetworkManager
+

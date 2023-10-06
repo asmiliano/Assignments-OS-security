@@ -1,0 +1,38 @@
+Step 18 
+
+To disable an Ethernet interface, it can be brought down with the ip link set command. Disable the interface and check the status of the interface by executing the following commands: 
+
+ip address show eth0 
+
+ip link set eth0 down 
+
+ip address show eth0 
+
+Note in the output of the third ip address command that there are no IP addresses displayed and the state of the eth0 interface is DOWN. 
+------------------------------------------------------------------------------------------------------------------------------------------
+
+[asmil@fedora /]$ ip address show enp0s3
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:d1:5a:66 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute enp0s3
+       valid_lft 86179sec preferred_lft 86179sec
+    inet6 fe80::73fb:776:72ab:5ac/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+
+[asmil@fedora /]$ cat /etc/netplan/00-installer-config.yaml
+cat: /etc/netplan/00-installer-config.yaml: No such file or directory
+
+[asmil@fedora /]$ ip link set enp0s3 down
+RTNETLINK answers: Operation not permitted
+
+[asmil@fedora /]$ sudo ip link set enp0s3 down
+[sudo] password for asmil: 
+
+[asmil@fedora /]$ ip address show enp0s3 
+2: enp0s3: <BROADCAST,MULTICAST> mtu 1500 qdisc fq_codel state DOWN group default qlen 1000
+    link/ether 08:00:27:d1:5a:66 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute enp0s3
+       valid_lft 79648sec preferred_lft 79648sec
+    inet6 fe80::70d3:42b7:594d:d2bc/64 scope link tentative noprefixroute 
+       valid_lft forever preferred_lft forever
+

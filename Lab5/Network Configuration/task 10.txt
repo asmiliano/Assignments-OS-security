@@ -1,0 +1,21 @@
+Step 10 
+
+The hostnamectl set-hostname command can also be used to change the system hostname. Although the prompt hasn't changed, you can verify that the hostname has changed by executing the hostnamectl command again. Execute the following commands: 
+
+hostnamectl set-hostname userver.example.com 
+
+hostnamectl 
+------------------------------------------------------------------------------------------------------------------------------------------
+
+asmil@asmil:/etc/netplan$ hostnamectl set-hostname userver.example.com
+asmil@asmil:/etc/netplan$ hostnamectl
+ Static hostname: userver.example.com
+       Icon name: computer-vm
+         Chassis: vm
+      Machine ID: 223391c7963b43e699597c3a37b29f89
+         Boot ID: 9e9bd85613124778861a8f18d0351583
+  Virtualization: oracle
+Operating System: Ubuntu 22.04.3 LTS              
+          Kernel: Linux 6.2.0-34-generic
+    Architecture: x86-64
+

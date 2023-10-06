@@ -1,0 +1,18 @@
+Step 3 
+
+Configuration files for network interfaces in Debian-derived systems, such as Ubuntu, are located in the /etc/netplan directory. The file in our virtual machine is located at /etc/netplan/01-netcfg.yaml. Execute the following command to view this file: 
+
+cat /etc/netplan/00-installer-config.yaml 
+------------------------------------------------------------------------------------------------------------------------------------------
+
+asmil@asmil:/$ cat /etc/netplan/00-installer-config.yaml
+cat: /etc/netplan/00-installer-config.yaml: No such file or directory
+asmil@asmil:/$ cd  /etc/netplan/
+asmil@asmil:/etc/netplan$ ls
+01-network-manager-all.yaml
+asmil@asmil:/etc/netplan$ cat 01-network-manager-all.yaml 
+# Let NetworkManager manage all devices on this system
+network:
+  version: 2
+  renderer: NetworkManager
+

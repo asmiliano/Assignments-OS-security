@@ -1,0 +1,15 @@
+Step 29 
+
+The hostnamectl command can also be used to change the system hostname. Change the hostname of the system and then view the hostname again by executing the following commands: 
+
+hostname cserver.example.com 
+
+hostname 
+------------------------------------------------------------------------------------------------------------------------------------------
+
+[asmil@fedora /]$ hostname qorgan.com
+hostname: you must be root to change the host name
+[asmil@fedora /]$ sudo hostname qorgan.com
+[asmil@fedora /]$ hostname
+qorgan.com
+

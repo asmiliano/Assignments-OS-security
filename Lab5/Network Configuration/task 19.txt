@@ -1,0 +1,19 @@
+Step 19 
+
+To enable the Ethernet interface, if it is not configured to start at boot time, the interface can be brought up with the ip link set command. Execute the following commands: 
+
+ip link set eth0 up  
+
+ip address show eth0 
+------------------------------------------------------------------------------------------------------------------------------------------
+
+[asmil@fedora /]$ sudo ip link set enp0s3 up
+[asmil@fedora /]$ ip address show enp0s3 
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:d1:5a:66 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute enp0s3
+       valid_lft 86396sec preferred_lft 86396sec
+    inet6 fe80::70d3:42b7:594d:d2bc/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+[asmil@fedora /]$ 
+

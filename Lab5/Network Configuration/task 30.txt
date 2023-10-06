@@ -1,0 +1,19 @@
+Step 30 
+
+On most systems, the IP address for the localhost hostname is defined in the /etc/hosts file. Display the contents of this file by executing the following command: 
+
+cat /etc/hosts
+------------------------------------------------------------------------------------------------------------------------------------------
+
+[asmil@fedora /]$ sudo hostname qorgan.com
+[asmil@fedora /]$ hostname
+qorgan.com
+[asmil@fedora /]$ cat /etc/hosts
+# Loopback entries; do not change.
+# For historical reasons, localhost precedes localhost.localdomain:
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+# See hosts(5) for proper format and other examples:
+# 192.168.1.10 foo.mydomain.org foo
+# 192.168.1.13 bar.mydomain.org bar
+

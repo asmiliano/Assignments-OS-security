@@ -1,0 +1,28 @@
+Step 4 
+
+New routes can be added on-the-fly with the ip route add command, but they are not persistent. To add a router device that has the IP address of 10.0.0.0 as a new default route, execute the following command. W 
+
+sudo ip route add 10.0.0.0/24 dev enp0s3 
+
+ip route show 
+------------------------------------------------------------------------------------------------------------------------------------------
+
+┌──(asmil㉿kali)-[~]
+└─$ sudo ip route add 10.0.0.0/24 dev enp0s3 
+[sudo] password for asmil: 
+Cannot find device "enp0s3"
+                                                                                      
+┌──(asmil㉿kali)-[~]
+└─$ ip route show
+default via 10.0.2.2 dev eth0 proto dhcp src [IP]metric 100 
+10.0.2.0/24 dev eth0 proto kernel scope link src [IP] metric 100 
+                                                                                      
+┌──(asmil㉿kali)-[~]
+└─$ sudo ip route add 10.0.0.0/24 dev eth0  
+                                                                                      
+┌──(asmil㉿kali)-[~]
+└─$ ip route show                         
+default via 10.0.2.2 dev eth0 proto dhcp src [IP] metric 100 
+10.0.0.0/24 dev eth0 scope link 
+10.0.2.0/24 dev eth0 proto kernel scope link src [IP] metric 100 
+

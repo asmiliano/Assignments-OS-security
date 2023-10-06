@@ -1,0 +1,9 @@
+Step 23 
+
+Although this new configuration could be made active by bringing the interface down and back up again (or by restarting the system), you can also use the init script to restart the network service. Execute the following command: 
+
+/etc/init.d/network restart
+------------------------------------------------------------------------------------------------------------------------------------------
+
+[asmil@fedora init.d]$ sudo systemctl restart NetworkManager
+

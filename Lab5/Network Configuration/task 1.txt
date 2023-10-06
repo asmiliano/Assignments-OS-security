@@ -1,0 +1,8 @@
+Step 1 
+
+For the first portion of this lab, you will be using the Ubuntu virtual machine. 
+
+To perform the steps of this lab, you will need the privileges of the superuser account. Log in as the root user
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+cd /

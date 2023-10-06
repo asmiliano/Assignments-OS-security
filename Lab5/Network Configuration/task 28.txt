@@ -1,0 +1,9 @@
+Step 28 
+
+Execute the hostname command to view the current system hostname: 
+
+hostname 
+------------------------------------------------------------------------------------------------------------------------------------------
+
+[asmil@fedora /]$ hostname
+fedora

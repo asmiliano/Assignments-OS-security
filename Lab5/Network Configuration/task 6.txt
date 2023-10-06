@@ -1,0 +1,31 @@
+Step 6 
+
+Modify the contents to create a new static configuration: 
+network: 
+  ethernets: 
+    enp0s3: 
+      addresses: [10.10.10.2/24] 
+      gateway4: 10.10.10.1 
+  version: 2	    
+
+The indentation of the lines is cosmetic; it is used to demonstrate that those lines pertain to the configuration of the enp0s3 interface. 
+Save the changes and quit the nano editor: 
+
+Ctrl+x 
+Y 
+Enter 
+------------------------------------------------------------------------------------------------------------------------------------------
+
+# Let NetworkManager manage all devices on this system
+network:
+  version: 2
+  renderer: NetworkManager
+
+  network:
+    ethernets: 
+    enp0s3:
+      addresses: [10.10.10.1/24]
+      gateway4: 10.10.10.1
+  version: 2
+
+

@@ -1,0 +1,20 @@
+Step 7 
+
+Although rebooting the system may be more thorough, the interface can now be brought up manually with the netplan apply command. Activate the Ethernet interface and view the new configuration by executing the following commands: 
+
+netplan apply  
+
+ip address show enp0s3 
+------------------------------------------------------------------------------------------------------------------------------------------
+
+asmil@asmil:/etc/netplan$ netplan apply
+ERROR: cannot create file /run/systemd/system/netplan-ovs-cleanup.service: Failed to create file “/run/systemd/system/netplan-ovs-cleanup.service.FENWB2”: Permission denied
+asmil@asmil:/etc/netplan$ sudo netplan apply
+asmil@asmil:/etc/netplan$ ip address show enp0s3 
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:ea:8d:a2 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute enp0s3
+       valid_lft 84031sec preferred_lft 84031sec
+    inet6 fe80::d29f:d9f7:93c3:200e/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+

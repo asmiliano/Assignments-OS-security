@@ -1,0 +1,11 @@
+Step 4 
+
+Create a copy of the network interface configuration file in your home directory by executing the following command: 
+
+cp /etc/netplan/00-installer-config.yaml /root 
+------------------------------------------------------------------------------------------------------------------------------------------s
+
+asmil@asmil:/etc/netplan$ cp /etc/netplan/01-network-manager-all.yaml /root
+cp: cannot stat '/root/01-network-manager-all.yaml': Permission denied
+asmil@asmil:/etc/netplan$ sudo cp /etc/netplan/01-network-manager-all.yaml /root
+

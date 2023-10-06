@@ -1,0 +1,31 @@
+Step 3 
+
+To view where packets will be routed, you can display the routing table with the route command, on legacy systems, or the ip route show command. Since the route command has been superseded by the ip routecommand, the following steps will use the ip route command. 
+
+Execute the following command to view the routing table:
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+┌──(asmil㉿kali)-[~]
+└─$ route        
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+default         10.0.2.2        0.0.0.0         UG    100    0        0 eth0
+10.0.2.0        0.0.0.0         255.255.255.0   U     100    0        0 eth0
+                                                                                      
+┌──(asmil㉿kali)-[~]
+└─$ ip route show
+default via 10.0.2.2 dev eth0 proto dhcp src 10.0.2.15 metric 100 
+10.0.2.0/24 dev eth0 proto kernel scope link src 10.0.2.15 metric 100 
+
+
+
+Команда ip route show отображает таблицу маршрутизации. Таблица маршрутизации - это таблица, которая содержит информацию о том, как маршрутизировать пакеты данных между различными сетями.
+
+Команда ip route show выводит список всех маршрутов в таблице маршрутизации, а также информацию о каждом маршруте, такую как целевая сеть, маска подсети, шлюз и метрика.
+
+Метрика - это число, которое указывает на стоимость использования маршрута. Чем меньше метрика, тем более предпочтительным является маршрут.
+
+Команда ip route show может использоваться для диагностики проблем с маршрутизацией и для проверки того, что маршруты настроены правильно.
+
+

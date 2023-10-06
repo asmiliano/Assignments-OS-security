@@ -1,0 +1,17 @@
+Step 2 
+
+View the current configuration of the enp0s3 Ethernet interface by entering the following command: 
+
+ip address show enp0s3 
+------------------------------------------------------------------------------------------------------------------------------------------
+
+asmil@asmil:/$ ip address show enp0s3 
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:ea:8d:a2 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute enp0s3
+       valid_lft 84398sec preferred_lft 84398sec
+    inet6 fe80::d29f:d9f7:93c3:200e/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+
+
+

@@ -1,0 +1,60 @@
+Step 6 
+
+Internet hostnames and IP addresses are usually stored in the distributed Domain Name System (DNS) and can be queried by using the host, dig, and nslookup commands.  
+
+Use the host command with the host name ubuntu.com to query for its IP address that is stored in DNS by executing the following command: 
+
+host ubuntu.com 
+
+The addresses displayed for the ubuntu.com host may not be in the same order as the example above.  
+
+Feel free to use the dig and nslookup commands to compare the results: 
+
+dig ubuntu.com 
+------------------------------------------------------------------------------------------------------------------------------------------
+
+┌──(asmil㉿kali)-[~]
+└─$ host google.com      
+google.com has address 142.250.74.110
+google.com has IPv6 address 2a00:1450:400f:801::200e
+google.com mail is handled by 10 smtp.google.com.
+
+host - это простая команда, которая позволяет выполнять простые запросы DNS
+                                                                                      
+┌──(asmil㉿kali)-[~]
+└─$ dig google.com
+
+; <<>> DiG 9.18.16-1-Debian <<>> google.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 21718
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;google.com.                    IN      A
+
+;; ANSWER SECTION:
+google.com.             215     IN      A       142.250.74.110
+
+;; Query time: 7 msec
+;; SERVER: 192.168.1.1#53(192.168.1.1) (UDP)
+;; WHEN: Wed Oct 04 14:03:27 EDT 2023
+;; MSG SIZE  rcvd: 55
+
+dig - это более мощная команда, которая позволяет выполнять более сложные запросы DNS. dig позволяет указывать тип записи, которую вы хотите получить, а также другие параметры, такие как сервер DNS, который вы хотите использовать.
+                                                                                      
+┌──(asmil㉿kali)-[~]
+└─$ nslookup google.com
+Server:         192.168.1.1
+Address:        192.168.1.1#53
+
+Non-authoritative answer:
+Name:   google.com
+Address: 142.250.74.110
+Name:   google.com
+Address: 2a00:1450:400f:801::200e
+
+nslookup - это еще одна мощная команда, которая позволяет выполнять сложные запросы DNS. nslookup похож на dig, но он имеет более простой синтаксис.
+

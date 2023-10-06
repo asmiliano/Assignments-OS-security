@@ -1,0 +1,8 @@
+Step 11 
+
+In a typical environment, rebooting the system by executing the rebootcommand would be the method used to make the changes to the hostname active. Execute the following command: 
+
+reboot 
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+reboot

@@ -1,0 +1,20 @@
+Step 12 
+
+Now, execute the hostnamectl command to view the current hostname: 
+
+hostnamectl 
+------------------------------------------------------------------------------------------------------------------------------------------
+
+asmil@userver:/$ hostnamectl
+ Static hostname: userver.example.com
+       Icon name: computer-vm
+         Chassis: vm
+      Machine ID: 223391c7963b43e699597c3a37b29f89
+         Boot ID: 17d5604fd7e3428f8567ad9f5befbfd2
+  Virtualization: oracle
+Operating System: Ubuntu 22.04.3 LTS              
+          Kernel: Linux 6.2.0-34-generic
+    Architecture: x86-64
+ Hardware Vendor: innotek GmbH
+  Hardware Model: VirtualBox
+

@@ -1,0 +1,23 @@
+Step 17 
+
+To view the networking configuration, tools such as the ifconfig command and the iproute2 suite of commands can be used. This portion of the lab will use the iproute2 suite of tools instead of the ifconfig command, which is being phased out in newer Linux distributions. 
+------------------------------------------------------------------------------------------------------------------------------------------
+
+[asmil@fedora /]$ ifconfig
+enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
+        inet6 fe80::73fb:776:72ab:5ac  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:d1:5a:66  txqueuelen 1000  (Ethernet)
+        RX packets 394  bytes 149073 (145.5 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 411  bytes 59198 (57.8 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 18  bytes 2118 (2.0 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 18  bytes 2118 (2.0 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
