@@ -8,6 +8,7 @@ MySQL
 phpMyAdmin 
 
 as a result, you must connect through the browser of the host machine to the web server 
+
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 To complete the practical part of this exercise, you will need to:
