@@ -1,3 +1,15 @@
+Practical part 
+
+Make a web server out of the virtual machine and install the following components 
+
+Apache 
+PHP 
+MySQL 
+phpMyAdmin 
+
+as a result, you must connect through the browser of the host machine to the web server 
+------------------------------------------------------------------------------------------------------------------------------------------
+
 To complete the practical part of this exercise, you will need to:
 
 1. Install Apache, PHP, MySQL, and phpMyAdmin on the virtual machine.
