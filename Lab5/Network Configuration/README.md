@@ -1,4 +1,4 @@
-Practical part 
+# Practical part # 
 
 Make a web server out of the virtual machine and install the following components 
 
